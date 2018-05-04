@@ -13,7 +13,7 @@ public class ConnectSql {
 
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-		    Connection con = DriverManager.getConnection("jdbc:mysql://127.0.01:3306/classicmodels","root","swain@88");
+		    Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/classicmodels","root","swain@88");
 		    Statement stmt=con.createStatement();  
 		    ResultSet rs=stmt.executeQuery("select max(creditLimit) from customers");  
 		    while(rs.next())  
